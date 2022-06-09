@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>student data</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Age</th>
+			<th>City</th>
+			<th>Edit</th>
+		</tr>
+		{% for s in student %}
+		<tr>
+			<td>{{s.name}}</td>
+			<td>{{s.age}}</td>
+			<td>{{s.city}}</td>	
+		<td><a href="/edit/{{s.id}}">edit</a></td>
+		</tr>
+		{% endfor %}
+	</table>
+
+</body>
+</html>
